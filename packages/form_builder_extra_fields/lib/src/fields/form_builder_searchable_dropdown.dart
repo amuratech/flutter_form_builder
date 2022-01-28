@@ -214,7 +214,7 @@ class FormBuilderSearchableDropdown<T> extends FormBuilderField<T> {
     this.showSearchBox = true,
     this.showClearButton = false,
     this.popupBackgroundColor,
-    this.maxHeight,
+    this.maxHeight = 300,
     this.filterFn,
     this.itemAsString,
     this.compareFn,
@@ -283,7 +283,7 @@ class FormBuilderSearchableDropdown<T> extends FormBuilderField<T> {
               key: ValueKey(state.value),
               // Hack to rebuild when didChange is called
               items: items,
-              maxHeight: 300,
+              maxHeight: maxHeight,
               onFind: onFind,
               onChanged: (val) {
                 state.requestFocus();
